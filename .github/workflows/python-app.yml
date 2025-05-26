@@ -16,3 +16,9 @@ jobs:
       - name: Clone private repo
         run: |
           git clone https://kanchana08:${{ secrets.TESTING }}@github.com/kanchana08/github_actions.git
+
+      - name: Run Linux command in cloned repo
+        run: |
+          cd github_actions
+          ls -la
+          echo "Current directory: $(pwd)"
