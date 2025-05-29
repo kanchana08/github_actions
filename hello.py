@@ -1,1 +1,1 @@
-print("Hello from GitHub action")
+print("Hello from GitHub ")
