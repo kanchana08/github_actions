@@ -15,7 +15,7 @@ jobs:
 
       - name: Clone private repo
         run: |
-          git clone https://kanchana08:${{ secrets.TEST }}@github.com/kanchana08/github_actions.git
+          git clone https://kanchana08:${{ secrets.TESTING }}@github.com/kanchana08/github_actions.git
 
       - name: Run Linux command in cloned repo
         run: |
