@@ -7,18 +7,15 @@ on:
 
 jobs:
   clone:
-    runs-on: self-hosted  # Run on your self-hosted runner
+    runs-on: self-hosted
 
     steps:
       - name: Checkout current repo
-        uses: actions/checkout@v3  # Checks out the current repository to the runner
+        uses: actions/checkout@v3
 
       - name: Clone private repo
         run: |
           git clone https://kanchana08:${{ secrets.TESTING }}@github.com/kanchana08/github_actions.git
-        env:
-          TESTING: ${{ secrets.TESTING }}  # Ensure secrets are passed correctly
-
       - name: Run Linux command in cloned repo
         run: |
           cd github_actions
